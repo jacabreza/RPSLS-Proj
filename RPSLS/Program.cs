@@ -10,14 +10,8 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            // Member Variables (HAS A)
-
-
-            // Constructor (SPAWNER)
-
-
-            // Member Methods (CAN DO)
-
+            Simulation simulation = new Simulation();
+            simulation.RunGame();
 
         }
     }

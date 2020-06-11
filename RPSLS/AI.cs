@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class Gestures
+    class AI : Player        //inheritance (IS A TYPE OF)
     {
         // Member Variables (HAS A)
-        public string GestureName;
+
 
         // Constructor (SPAWNER)
-        public Gestures(string gestureName)
+        public AI()
         {
-            this.GestureName = gestureName;
+           
         }
 
         // Member Methods (CAN DO)
+        public override void PlayersGesture()
+        {
+            // choose gesture as AI
+            // generate random number
+        }
+
     }
+
 }
