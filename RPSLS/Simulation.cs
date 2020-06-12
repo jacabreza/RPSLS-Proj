@@ -16,22 +16,23 @@ namespace RPSLS
         public Simulation()
         {
             playerOne = new Human();
-
+            
         }
 
         // Member Methods (CAN DO)
 
         public void DisplayWelcome()
         {
-            Console.WriteLine("Welcome to the game of Rock, Paper, Scissor, Lizard, Spock!");
-            Console.WriteLine("");
+            Console.WriteLine("\nWelcome to the game of Rock, Paper, Scissor, Lizard, Spock!");
+            Console.ReadLine();
         }
 
 
         public void DisplayRules()
         {
             Console.WriteLine("\n\tThe rules are simple: ");
-            Console.WriteLine("\n Rock beats Scissors" +
+            Console.ReadLine();
+            Console.WriteLine("Rock beats Scissors" +
                 "\n Rock beats Lizard" +
                 "\n Paper beats Rock" +
                 "\n Paper beats Spock" +
@@ -41,45 +42,54 @@ namespace RPSLS
                 "\n Lizard beats Spock" +
                 "\n Spock beats Scissors" +
                 "\n Spock beats Rock");
+            Console.ReadLine();
 
             Console.WriteLine("\nNow let's play the Game!!!");
-            Console.WriteLine("");
+            Console.ReadLine();
         }
 
 
         public void ChooseGameMode()
         {
-                Console.WriteLine("\n\tGame Mode:");
-                Console.WriteLine("\nEnter 1 for Human Vs. AI");
-                Console.WriteLine("Enter 2 for Human Vs. Human.");
+            Console.WriteLine("\n\tPick a Game Mode:");
+            Console.WriteLine("\nEnter 1 for Human Vs. AI");
+            Console.WriteLine("Enter 2 for Human Vs. Human.");
 
-            //bool userInput = true;
             string input = Console.ReadLine();
-            //while ()
-           // {
-                if (input == "1")
-                {
+
+            if (input == "1")
+            {
                     Console.WriteLine("You have picked: Human Vs. AI");
                     playerTwo = new AI();
-                    
-                }
-                else if (input == "2")
-                {
+            }
+            else if (input == "2")
+            {
                     Console.WriteLine("You have picked: Human Vs. Human");
                     playerTwo = new Human();
+            }
+            else
+            {
+                while (input != "1" && input != "2")
+                {
+                   Console.WriteLine("You picked an invalid number! " + "Please Enter 1 for: Human Vs. AI." + " or Enter 2 for: Human Vs. Human");
+                   input = Console.ReadLine();
+
+                   if (input == "1")
+                   {
+                       Console.WriteLine("You have picked: Human Vs. AI");
+                       playerTwo = new AI();
+                   }
+                   else if (input == "2")
+                   {
+                       Console.WriteLine("You have picked: Human Vs. Human");
+                       playerTwo = new Human();
+                   }
+
                 }
-                    
-                
-                //else if (input != "1" && input != "2")
-                //{
-                //    Console.WriteLine("Invalid option. Please enter 1 for Human Vs. AI or 2 for Human Vs. Human");
-                    
-                //}
-                    
-           // }
 
+            }
+            
         }
-
 
 
         public void RunGame()           //Master Method - All Methods come together here
@@ -87,13 +97,14 @@ namespace RPSLS
             DisplayWelcome();
             DisplayRules();
             ChooseGameMode();
+            
             playerOne.PlayersGesture();
             playerTwo.PlayersGesture();
 
 
             //\\ 0. Intro to game
             //\\ 1. Display rules for game
-            // 2. Choose Game Mode (P v P) (P v Com.)   (GAME)
+            //\\ 2. Choose Game Mode (P v P) (P v Com.) 
                 //\\ a. Ask for which game mode 
                 //\\ b. Capture answer from user
                 //\\ c. Make our player objects

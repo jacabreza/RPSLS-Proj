@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    abstract class Player
+    public abstract class Player
     {
         // Member Variables (HAS A)
         public Gestures Gestures;
+        public string name;
+
         //public int score;
 
         public List<Gestures> listOfGestures;
@@ -30,9 +32,13 @@ namespace RPSLS
         }
 
         // Member Methods (CAN DO)
+
+        public abstract void PlayerName();
+
+
         public abstract void PlayersGesture();
-        
-            
-        
+       
+
     }
+        
 }

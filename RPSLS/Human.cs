@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Human : Player     //inheritance (IS A TYPE OF)
+    public class Human : Player     //inheritance (IS A TYPE OF)
     {
         // Member Variables (HAS A)
         
@@ -14,10 +14,17 @@ namespace RPSLS
         // Constructor (SPAWNER)
         public Human()
         {
-           
+            PlayerName();
         }
 
         // Member Methods (CAN DO)
+
+        public override void PlayerName()
+        {
+            Console.WriteLine("Please type in your name: ");
+            name = Console.ReadLine();
+        }
+
         public override void PlayersGesture()
         {
             // choose gesture as human

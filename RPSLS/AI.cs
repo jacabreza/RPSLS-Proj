@@ -14,10 +14,17 @@ namespace RPSLS
         // Constructor (SPAWNER)
         public AI()
         {
-           
+            PlayerName();
         }
 
         // Member Methods (CAN DO)
+
+        public override void PlayerName()
+        {
+            Console.WriteLine("Please pick name for the AI:  ");
+            name = Console.ReadLine();
+        }
+
         public override void PlayersGesture()
         {
             // choose gesture as AI
