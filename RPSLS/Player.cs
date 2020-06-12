@@ -11,6 +11,7 @@ namespace RPSLS
         // Member Variables (HAS A)
         public int score = 0;
         public string name;
+        public string userInput;
 
         //public int score;
 
@@ -27,6 +28,7 @@ namespace RPSLS
             listOfGestures.Add("Scissor");
             listOfGestures.Add("Lizard");
             listOfGestures.Add("Spock");
+            
         }
 
         // Member Methods (CAN DO)
@@ -34,7 +36,7 @@ namespace RPSLS
         public abstract void PlayerName();
 
 
-        public abstract void PlayersGesture();
+        public abstract string PlayersGesture();
        
 
     }

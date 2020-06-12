@@ -96,7 +96,7 @@ namespace RPSLS
             DisplayWelcome();
             DisplayRules();
             ChooseGameMode();
-            
+           
             playerOne.PlayersGesture();
             playerTwo.PlayersGesture();
 

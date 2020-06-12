@@ -10,11 +10,10 @@ namespace RPSLS
     {
         // Member Variables (HAS A)
 
-
         // Constructor (SPAWNER)
         public AI()
         {
-            PlayerName();
+            //PlayerName();
         }
 
         // Member Methods (CAN DO)
@@ -25,14 +24,12 @@ namespace RPSLS
             name = Console.ReadLine();
         }
 
-        public override void PlayersGesture()
+        public override string PlayersGesture()
         {
             Console.WriteLine("Please pick a Gesture from the following: ");
-            
+            return userInput;
             // choose gesture as AI
             // generate random number
         }
-
     }
-
 }
