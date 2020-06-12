@@ -27,6 +27,8 @@ namespace RPSLS
 
         public override void PlayersGesture()
         {
+            Console.WriteLine("Please pick a Gesture from the following: ");
+            
             // choose gesture as AI
             // generate random number
         }

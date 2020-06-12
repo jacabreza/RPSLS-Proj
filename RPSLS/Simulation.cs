@@ -43,7 +43,6 @@ namespace RPSLS
                 "\n Spock beats Scissors" +
                 "\n Spock beats Rock");
             Console.ReadLine();
-
             Console.WriteLine("\nNow let's play the Game!!!");
             Console.ReadLine();
         }
@@ -108,7 +107,7 @@ namespace RPSLS
                 //\\ a. Ask for which game mode 
                 //\\ b. Capture answer from user
                 //\\ c. Make our player objects
-            // 3. Choose name for Players   (PLAYER)
+            //\\ 3. Choose name for Players   (PLAYER)
             // 4. Choose a gesture for Player 1     (PLAYER)
             // 5. Choose a gesture for Player 2     (PLAYER)
             // 6. Compare the 2 chosen gestures     (GAME)

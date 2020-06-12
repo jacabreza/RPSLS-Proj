@@ -9,26 +9,24 @@ namespace RPSLS
     public abstract class Player
     {
         // Member Variables (HAS A)
-        public Gestures Gestures;
+        public int score = 0;
         public string name;
 
         //public int score;
 
-        public List<Gestures> listOfGestures;
+        public List<string> listOfGestures;
 
         // Constructor (SPAWNER)
         public Player()
         {
-            int playerOne = 0;
-            int playerTwo = 0;
 
-            listOfGestures = new List<Gestures>();
+            listOfGestures = new List<string>();
 
-            listOfGestures.Add(new Gestures("Rock"));
-            listOfGestures.Add(new Gestures("Paper"));
-            listOfGestures.Add(new Gestures("Scissor"));
-            listOfGestures.Add(new Gestures("Lizard"));
-            listOfGestures.Add(new Gestures("Spock"));
+            listOfGestures.Add("Rock");
+            listOfGestures.Add("Paper");
+            listOfGestures.Add("Scissor");
+            listOfGestures.Add("Lizard");
+            listOfGestures.Add("Spock");
         }
 
         // Member Methods (CAN DO)
