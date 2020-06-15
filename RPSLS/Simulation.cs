@@ -13,16 +13,13 @@ namespace RPSLS
         // Member Variables (HAS A)
         public Player playerOne;
         public Player playerTwo;
-        public int playerOneScore;
-        public int playerTwoScore;
         public bool gameIsWorking;
 
 
         // Constructor (SPAWNER)
         public Simulation()
         {
-            playerOneScore = 0;
-            playerTwoScore = 0;
+            
             playerOne = new Human();
             gameIsWorking = true;
         }
@@ -33,14 +30,14 @@ namespace RPSLS
         {
             
             Console.WriteLine("\nWelcome to the game of Rock, Paper, Scissor, Lizard, Spock!");
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
 
         public void DisplayRules()
         {
             Console.WriteLine("\n\tThe rules are simple: ");
-            Console.ReadLine();
+           // Console.ReadLine();
             Console.WriteLine("Rock beats Scissors" +
                 "\n Rock beats Lizard" +
                 "\n Paper beats Rock" +
@@ -51,9 +48,9 @@ namespace RPSLS
                 "\n Lizard beats Spock" +
                 "\n Spock beats Scissors" +
                 "\n Spock beats Rock");
-            Console.ReadLine();
+           // Console.ReadLine();
             Console.WriteLine("\nNow let's play the Game!!!");
-            Console.ReadLine();
+           // Console.ReadLine();
         }
 
 
@@ -103,121 +100,122 @@ namespace RPSLS
         public void CompareGestures()
         {
             
-            if (playerOne.choice.ToLower() == "rock")
+            if (playerOne.choice == "rock")
             {
-                if (playerTwo.choice.ToLower() == "scissors")
+                if (playerTwo.choice == "scissor")
                 {
                     Console.WriteLine("Rock beats Scissors! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "lizard")
+                else if (playerTwo.choice == "lizard")
                 {
                     Console.WriteLine("Rock beats Lizard! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "paper")
+                else if (playerTwo.choice == "paper")
                 {
                     Console.WriteLine("Paper beats Rock! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "spock")
+                else if (playerTwo.choice == "spock")
                 {
                     Console.WriteLine("Spock beats Rock! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
             }
-            else if (playerOne.choice.ToLower() == "paper")
+            else if (playerOne.choice == "paper")
             {
-                if (playerTwo.choice.ToLower() == "rock")
+                if (playerTwo.choice == "rock")
                 {
                     Console.WriteLine("Paper beats Rock! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "spock")
+                else if (playerTwo.choice == "spock")
                 {
                     Console.WriteLine("Paper bests Spock! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "lizard")
+                else if (playerTwo.choice == "lizard")
                 {
                     Console.WriteLine("Lizard beats Paper! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "scissor")
+                else if (playerTwo.choice == "scissor")
                 {
                     Console.WriteLine("Scissor beats Paper! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
             }
-            else if (playerOne.choice.ToLower() == "scissors")
+            else if (playerOne.choice == "scissor")
             {
-                if (playerTwo.choice.ToLower() == "paper")
+                if (playerTwo.choice == "paper")
                 {
                     Console.WriteLine("Paper beats Paper! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "lizard")
+                else if (playerTwo.choice == "lizard")
                 {
                     Console.WriteLine("Paper bests Lizard! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "spock")
+                else if (playerTwo.choice == "spock")
                 {
                     Console.WriteLine("Spock beats Scissors! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "Rock")
+                else if (playerTwo.choice == "Rock")
                 {
                     Console.WriteLine("Rock beats Scissors! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
             }
-            else if (playerOne.choice.ToLower() == "lizard")
+            else if (playerOne.choice == "lizard")
             {
-                if (playerTwo.choice.ToLower() == "paper")
+                if (playerTwo.choice == "paper")
                 {
                     Console.WriteLine("Paper beats paper! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "spock")
+                else if (playerTwo.choice == "spock")
                 {
                     Console.WriteLine("Paper bests Spock! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "scissors")
+                else if (playerTwo.choice == "scissor")
                 {
                     Console.WriteLine("Scissors beats Lizard! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "rock")
+                else if (playerTwo.choice == "rock")
                 {
                     Console.WriteLine("Rock beats Lizard! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
             }
-            else if (playerOne.choice.ToLower() == "spock")
+            else if (playerOne.choice == "spock")
             {
-                if (playerTwo.choice.ToLower() == "scissors")
+                if (playerTwo.choice == "scissor")
                 {
                     Console.WriteLine("Paper beats Scissors! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "rock")
+                else if (playerTwo.choice == "rock")
                 {
                     Console.WriteLine("Paper bests Rock! Player 1 wins the round!");
-                    playerOneScore = playerOneScore + 1;
+                    playerOne.score = playerOne.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "lizard")
+                else if (playerTwo.choice == "lizard")
                 {
                     Console.WriteLine("Lizard beats Spock! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
-                else if (playerTwo.choice.ToLower() == "paper")
+                else if (playerTwo.choice == "paper")
                 {
                     Console.WriteLine("Paper beats Spock! Player 2 wins the round!");
-                    playerTwoScore = playerTwoScore + 1;
+                    playerTwo.score = playerTwo.score + 1;
                 }
             }
+
             else if(playerOne.choice == playerTwo.choice)
             {
                 Console.WriteLine("Tied!");
@@ -233,13 +231,13 @@ namespace RPSLS
 
         public void DisplayWinner()
         {
-            if (playerOneScore == 2)
+            if (playerOne.score == 2)
             {
                 Console.WriteLine("Player 1 Wins the Game!");
             }
-            if (playerTwoScore == 2)
+            if (playerTwo.score == 2)
             {
-                Console.WriteLine("PLayer 2 Wins the Game!");
+                Console.WriteLine("Player 2 Wins the Game!");
             }
 
         }
@@ -253,21 +251,20 @@ namespace RPSLS
             
             ChooseGameMode();
 
-            playerOne.PlayersGesture();
-            playerTwo.PlayersGesture();
-
-            CompareGestures();
 
             while (gameIsWorking)
             {
-                //playerOne.PlayersGesture();
-                //playerTwo.PlayersGesture();
 
+                playerOne.choice = playerOne.PlayersGesture().ToLower();
+                playerTwo.choice = playerTwo.PlayersGesture().ToLower();
 
-                if (playerOneScore == 2 || playerTwoScore == 2)
+                CompareGestures();
+
+                if (playerOne.score == 2 || playerTwo.score == 2)
                 {
                     gameIsWorking = false;
                 }
+                
 
             }
            

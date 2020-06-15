@@ -30,15 +30,13 @@ namespace RPSLS
         {
             Console.WriteLine("\n\tComputer's turn to pick a gesture: ");
 
-            for (int i = 0; i < listOfGestures.Count; i++)
-            {
-                Console.WriteLine((i + 1) + "-" + listOfGestures[i] + " ");
-            }
+           
             random = new Random();
-            randomGesture = random.Next(1, 5).ToString();
+            int index = random.Next(0, 5);
+            string chosenGesture = listOfGestures[index];
 
-            Console.WriteLine($"\tComputer chose: {randomGesture}");
-            return userInput;
+            Console.WriteLine($"\tComputer chose: {chosenGesture}");
+            return chosenGesture;
 
             // choose gesture as AI
             // generate random number

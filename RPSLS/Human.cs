@@ -26,16 +26,17 @@ namespace RPSLS
 
         public override string PlayersGesture()
         {
-            Console.WriteLine("\n\tPick a Gesture from the folow: ");
+            Console.WriteLine("\n\tPick a Gesture from the folowing: ");
             
             for (int i = 0; i < listOfGestures.Count; i++)
             {
                 Console.WriteLine((i + 1) + "-" + listOfGestures[i] + " ");
             }
 
-            Console.Write("\n\tYour Pick is: ");
-            userInput = Console.ReadLine();
-            return userInput;
+            Console.Write("\n\tYour Pick is: "); 
+            int userInput = int.Parse(Console.ReadLine());      //Put Validation?
+            string capturedInput = listOfGestures[userInput - 1];
+            return capturedInput;
 
             // choose gesture as human
         }
