@@ -12,7 +12,8 @@ namespace RPSLS
         public int score = 0;
         public string name;
         public string userInput;
-
+        public string choice;
+        
         //public int score;
 
         public List<string> listOfGestures;

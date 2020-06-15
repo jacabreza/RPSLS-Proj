@@ -12,7 +12,6 @@ namespace RPSLS
         {
             Simulation simulation = new Simulation();
             simulation.RunGame();
-
         }
     }
 }

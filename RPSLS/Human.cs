@@ -26,12 +26,14 @@ namespace RPSLS
 
         public override string PlayersGesture()
         {
-            Console.WriteLine("\nPick a Gesture from the folow: ");
-
+            Console.WriteLine("\n\tPick a Gesture from the folow: ");
+            
             for (int i = 0; i < listOfGestures.Count; i++)
             {
                 Console.WriteLine((i + 1) + "-" + listOfGestures[i] + " ");
             }
+
+            Console.Write("\n\tYour Pick is: ");
             userInput = Console.ReadLine();
             return userInput;
 
